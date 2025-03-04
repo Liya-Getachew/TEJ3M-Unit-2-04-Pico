@@ -9,60 +9,60 @@ import time
 import board
 import digitalio
 
-led_green = digitalio.DigitalInOut(board.GP11)
-led_blue = digitalio.DigitalInOut(board.GP12)
-led_red = digitalio.DigitalInOut(board.GP13)
+LED_GREEN = digitalio.DigitalInOut(board.GP11)
+LED_BLUE = digitalio.DigitalInOut(board.GP12)
+LED_RED = digitalio.DigitalInOut(board.GP13)
 
-led_green.direction = digitalio.Direction.OUTPUT
-led_blue.direction = digitalio.Direction.OUTPUT
-led_red.direction = digitalio.Direction.OUTPUT
+LED_GREEN.direction = digitalio.Direction.OUTPUT
+LED_BLUE.direction = digitalio.Direction.OUTPUT
+LED_RED.direction = digitalio.Direction.OUTPUT
 
 blink_time = 1000
 
 # loop forever
 while True:
-    led_green.value = True # GREEN
+    LED_GREEN.value = True # GREEN
     time.sleep(blink_time) 
-    led_green.value = False 
+    LED_GREEN.value = False 
     time.sleep(blink_time) 
 
-    led_blue.value = True # BLUE
+    LED_BLUE.value = True # BLUE
     time.sleep(blink_time) 
-    led_blue.value = False 
+    LED_BLUE.value = False 
     time.sleep(blink_time)
 
-    led_red.value = True # RED
+    LED_RED.value = True # RED
     time.sleep(blink_time) 
-    led_red.value = False 
+    LED_RED.value = False 
     time.sleep(blink_time) 
 
-    led_red.value = True # YELLOW
-    led_green.value = True 
+    LED_RED.value = True # YELLOW
+    LED_GREEN.value = True 
     time.sleep(blink_time) 
-    led_red.value = False 
-    led_green.value = False 
+    LED_RED.value = False 
+    LED_GREEN.value = False 
     time.sleep(blink_time)  
 
-    led_blue.value = True # CYAN
-    led_green.value = True 
+    LED_BLUE.value = True # CYAN
+    LED_GREEN.value = True 
     time.sleep(blink_time) 
-    led_blue.value = False 
-    led_green.value = False 
+    LED_BLUE.value = False 
+    LED_GREEN.value = False 
     time.sleep(blink_time) 
 
-    led_blue.value = True # MAGENTA
-    led_red.value = True 
+    LED_BLUE.value = True # MAGENTA
+    LED_RED.value = True 
     time.sleep(blink_time) 
-    led_blue.value = False 
-    led_red.value = False 
+    LED_BLUE.value = False 
+    LED_RED.value = False 
     time.sleep(blink_time)  
 
-    led_green.value = True # WHITE
-    led_blue.value = True
-    led_red.value = True 
+    LED_GREEN.value = True # WHITE
+    LED_BLUE.value = True
+    LED_RED.value = True 
     time.sleep(blink_time)
-    led_green.value = False  
-    led_blue.value = False 
-    led_red.value = False 
+    LED_GREEN.value = False  
+    LED_BLUE.value = False 
+    LED_RED.value = False 
     time.sleep(blink_time) 
 
