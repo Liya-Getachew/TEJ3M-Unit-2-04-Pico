@@ -17,52 +17,49 @@ LED_GREEN.direction = digitalio.Direction.OUTPUT
 LED_BLUE.direction = digitalio.Direction.OUTPUT
 LED_RED.direction = digitalio.Direction.OUTPUT
 
-blink_time = 1000
+blink_time = 1
 
 # loop forever
 while True:
-    LED_GREEN.value = True # GREEN
-    time.sleep(blink_time) 
-    LED_GREEN.value = False 
+    # GREEN
+    LED_GREEN.value = True
+    LED_BLUE.value = False
+    LED_RED.value = False 
     time.sleep(blink_time) 
 
-    LED_BLUE.value = True # BLUE
+    # BLUE
+    LED_GREEN.value = False
+    LED_BLUE.value = True 
+    LED_RED.value = False
     time.sleep(blink_time) 
+
+    # RED
+    LED_GREEN.value = False
     LED_BLUE.value = False 
-    time.sleep(blink_time)
-
-    LED_RED.value = True # RED
-    time.sleep(blink_time) 
-    LED_RED.value = False 
+    LED_RED.value = True
     time.sleep(blink_time) 
 
-    LED_RED.value = True # YELLOW
-    LED_GREEN.value = True 
-    time.sleep(blink_time) 
-    LED_RED.value = False 
-    LED_GREEN.value = False 
+    # YELLOW
+    LED_GREEN.value = True
+    LED_BLUE.value = False 
+    LED_RED.value = True
     time.sleep(blink_time)  
 
-    LED_BLUE.value = True # CYAN
-    LED_GREEN.value = True 
-    time.sleep(blink_time) 
-    LED_BLUE.value = False 
-    LED_GREEN.value = False 
+    # CYAN
+    LED_GREEN.value = True
+    LED_BLUE.value = True 
+    LED_RED.value = False
     time.sleep(blink_time) 
 
-    LED_BLUE.value = True # MAGENTA
-    LED_RED.value = True 
-    time.sleep(blink_time) 
-    LED_BLUE.value = False 
-    LED_RED.value = False 
-    time.sleep(blink_time)  
+    # MAGENTA
+    LED_GREEN.value = False
+    LED_BLUE.value = True 
+    LED_RED.value = True
+    time.sleep(blink_time)   
 
-    LED_GREEN.value = True # WHITE
-    LED_BLUE.value = True
-    LED_RED.value = True 
-    time.sleep(blink_time)
-    LED_GREEN.value = False  
-    LED_BLUE.value = False 
-    LED_RED.value = False 
+    # GREEN
+    LED_GREEN.value = True
+    LED_BLUE.value = True 
+    LED_RED.value = True
     time.sleep(blink_time) 
 
